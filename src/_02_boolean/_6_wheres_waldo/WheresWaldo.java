@@ -57,14 +57,24 @@ public class WheresWaldo extends PApplet {
 
     @Override
     public void draw() {
-    	println("X: " + mouseX + " Y: " + mouseY);
+    println("X: " + mouseX + " Y: " + mouseY);
+    	if (mousePressed) {
+    		if (mouseX == 400) {
+    			if (mouseY == 215) {
+    				playWhoohoo();
+    			}
+    		}
+    		else {
+    			playDoh();
+    		}
+    	}
+    	
     }
 
     static public void main(String[] args) {
         PApplet.main(WheresWaldo.class.getName());
-        if(mouseClicked) {
         	
-        }
+        
     }
 
     /*********************** DO NOT MODIFY THE CODE BELOW ********************/
